@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product | NovaCart Admin</title>
+
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>NovaCart</h2>
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="dashboard.html">📊 Dashboard</a>
+            </li>
+
+            <li class="active">
+                <a href="products.html">📦 Products</a>
+            </li>
+
+            <li>
+                <a href="orders.html">🛒 Orders</a>
+            </li>
+
+            <li>
+                <a href="users.html">👥 Users</a>
+            </li>
+
+            <li>
+                <a href="profile.html">👤 Profile</a>
+            </li>
+
+            <li>
+                <a href="change-password.html">🔒 Change Password</a>
+            </li>
+
+            <li>
+                <a href="#" id="logoutBtn">🚪 Logout</a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Topbar -->
+        <div class="topbar">
+
+            <button id="menuToggle" class="menu-btn">
+                ☰
+            </button>
+
+            <h2>Add Product</h2>
+
+        </div>
+
+        <form id="addProductForm" class="admin-form">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Product Name"
+                required
+            >
+
+            <input
+                type="text"
+                id="category"
+                placeholder="Category"
+                required
+            >
+
+            <input
+                type="number"
+                id="price"
+                placeholder="Price"
+                required
+            >
+
+            <input
+                type="number"
+                id="stock"
+                placeholder="Stock"
+                required
+            >
+
+            <input
+                type="text"
+                id="image"
+                placeholder="Image URL"
+                required
+            >
+
+            <textarea
+                id="description"
+                rows="5"
+                placeholder="Product Description"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Add Product
+            </button>
+
+        </form>
+
+    </main>
+
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/admin-auth.js"></script>
+<script src="js/logout.js"></script>
+<script src="js/add-product.js"></script>
+<script src="js/sidebar.js"></script>
+
+</body>
+</html>

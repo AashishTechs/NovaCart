@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | NovaCart</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/admin.css">
+
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- ================= Sidebar ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <span>NovaCart</span>
+
+        </div>
+
+        <ul>
+
+            <li class="active">
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="products.html">
+                    <i class="fa-solid fa-box"></i>
+                    <span>Products</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="orders.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Orders</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="users.html">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Users</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="profile.html">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" id="logoutBtn">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- ================= Main Content ================= -->
+
+    <div class="main-content">
+
+        <!-- Topbar -->
+
+        <header class="topbar">
+
+            <div class="topbar-left">
+
+                <button id="menuToggle" class="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+
+            <div class="top-right">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <i class="fa-regular fa-moon"></i>
+
+                <div class="admin-profile">
+
+                    <img
+                        src="https://i.pravatar.cc/100?img=12"
+                        alt="Admin">
+
+                    <span>Aashish Gupta</span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- Dashboard Content -->
+
+        <section class="dashboard-content">
+
+            <h1>Admin Dashboard</h1>
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <h3>Total Users</h3>
+
+                    <h2 id="totalUsers">0</h2>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Total Products</h3>
+
+                    <h2 id="totalProducts">0</h2>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Total Orders</h3>
+
+                    <h2 id="totalOrders">0</h2>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Total Revenue</h3>
+
+                    <h2 id="totalRevenue">$0</h2>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/admin-auth.js"></script>
+<script src="js/logout.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/sidebar.js"></script>
+
+</body>
+</html>

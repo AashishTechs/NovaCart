@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaCart | Contact</title>    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <link rel="stylesheet" href="style.css">
+<script src="config.js"></script>
+    <script src="script.js"></script>
+    <script src="validation.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                <h1>NovaCart</h1>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="index.html#categories">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="my-orders.html">My Orders</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <a href="wishlist.html"><i class="fa-regular fa-heart"></i> Wishlist</a>
+                <a href="cart.html" class="cart-link"><i class="fa-solid fa-cart-shopping"></i> Cart<span class="cart-count" id="navCartCount">0</span></a>
+                <a href="login.html"><i class="fa-regular fa-user"></i> Login</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+
+        </nav>
+
+    </header>
+    <!-- Contact Section -->
+    <section class="contact">
+
+        <h1>Contact Us</h1>
+
+        <p>
+            We'd love to hear from you! Fill out the form below and we'll get back to you as soon as possible.
+        </p>
+
+        <form>
+
+            <input
+                type="text"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <input
+                type="text"
+                placeholder="Subject"
+                required
+            >
+
+            <textarea
+                rows="6"
+                placeholder="Your Message"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 NovaCart. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

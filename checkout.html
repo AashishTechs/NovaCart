@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+
+<meta charset="UTF-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Checkout | NovaCart</title>
+
+
+
+<link rel="stylesheet" href="style.css">
+
+
+<link rel="stylesheet" href="checkout.css">
+
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- HEADER -->
+
+
+<header class="header">
+
+
+
+<div class="logo">
+
+
+<a href="index.html">
+
+Nova<span>Cart</span>
+
+</a>
+
+
+</div>
+
+
+
+
+<nav>
+
+
+<a href="index.html">
+Home
+</a>
+
+
+
+<a href="products.html">
+Products
+</a>
+
+
+
+<a href="cart.html">
+
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+
+Cart
+
+
+<span id="total-items">
+
+0
+
+</span>
+
+
+</a>
+
+
+
+</nav>
+
+
+
+</header>
+
+
+
+
+
+
+
+<!-- CHECKOUT SECTION -->
+
+
+<section class="checkout-page">
+
+
+
+<div class="checkout-container">
+
+
+
+
+
+<!-- LEFT SIDE -->
+
+
+<div class="checkout-left">
+
+
+
+
+
+<!-- DELIVERY ADDRESS -->
+
+
+<div class="checkout-card">
+
+
+
+<h2>
+
+
+<i class="fa-solid fa-location-dot"></i>
+
+
+Delivery Address
+
+
+</h2>
+
+
+
+
+
+<div id="savedAddresses">
+
+
+
+<div class="address-box active">
+
+
+
+<div class="address-header">
+
+
+<h3>
+
+Default Address
+
+</h3>
+
+
+
+<i class="fa-solid fa-circle-check"></i>
+
+
+
+</div>
+
+
+
+
+<p>
+
+Add your delivery address
+
+</p>
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<button 
+class="add-address-btn"
+type="button"
+onclick="openAddressModal()">
+
+
+
+<i class="fa-solid fa-plus"></i>
+
+
+Add New Address
+
+
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+</div>
+<!-- RIGHT SIDE -->
+
+
+<div class="checkout-right">
+
+
+
+
+
+<!-- ORDER SUMMARY -->
+
+
+<div class="checkout-card">
+
+
+
+<h2>
+
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+
+Order Summary
+
+
+</h2>
+
+
+
+
+
+<div id="checkoutItems">
+
+
+<!-- Cart products will load here -->
+
+
+</div>
+
+
+
+
+
+<hr>
+
+
+
+
+
+<div class="price-row">
+
+
+<span>
+
+Total Amount
+
+</span>
+
+
+
+
+<strong id="checkout-total">
+
+
+₹0
+
+
+</strong>
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- PAYMENT FORM -->
+
+
+<form id="checkout-form">
+
+
+
+
+
+<div class="checkout-card">
+
+
+
+<h2>
+
+
+<i class="fa-solid fa-credit-card"></i>
+
+
+Payment Method
+
+
+</h2>
+
+
+
+
+
+
+
+<label class="payment-option">
+
+
+<input 
+type="radio"
+name="payment"
+value="COD"
+checked>
+
+
+
+<span>
+
+Cash On Delivery
+
+</span>
+
+
+</label>
+
+
+
+
+
+
+
+<label class="payment-option">
+
+
+<input 
+type="radio"
+name="payment"
+value="UPI">
+
+
+
+<span>
+
+UPI Payment
+
+</span>
+
+
+</label>
+
+
+
+
+
+
+
+<label class="payment-option">
+
+
+<input 
+type="radio"
+name="payment"
+value="CARD">
+
+
+
+<span>
+
+Credit / Debit Card
+
+</span>
+
+
+</label>
+
+
+
+
+
+
+
+
+
+<button 
+type="submit"
+class="place-order-btn">
+
+
+
+<i class="fa-solid fa-lock"></i>
+
+
+
+Place Order
+
+
+
+</button>
+
+
+
+
+
+</div>
+
+
+
+
+
+</form>
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- FOOTER -->
+
+
+<footer class="footer">
+
+
+
+
+
+<div class="footer-container">
+
+
+
+
+
+<div class="footer-box">
+
+
+<h3>
+
+NovaCart
+
+</h3>
+
+
+
+<p>
+
+Shop smarter with premium products.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="footer-box">
+
+
+<h3>
+
+Quick Links
+
+</h3>
+
+
+
+
+<a href="index.html">
+
+Home
+
+</a>
+
+
+
+<a href="products.html">
+
+Products
+
+</a>
+
+
+
+<a href="cart.html">
+
+Cart
+
+</a>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="footer-box">
+
+
+<h3>
+
+Follow Us
+
+</h3>
+
+
+
+
+<div class="social-icons">
+
+
+
+<i class="fa-brands fa-facebook"></i>
+
+
+<i class="fa-brands fa-instagram"></i>
+
+
+<i class="fa-brands fa-twitter"></i>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<p class="copyright">
+
+© 2026 NovaCart. All Rights Reserved.
+
+</p>
+
+
+
+
+
+</footer>
+<!-- ADDRESS MODAL -->
+
+
+<div class="address-modal" id="addressModal">
+
+
+
+<div class="modal-box">
+
+
+
+
+
+<div class="modal-header">
+
+
+
+<h2>
+
+Add New Address
+
+</h2>
+
+
+
+
+<button 
+type="button"
+onclick="closeAddressModal()">
+
+
+
+<i class="fa-solid fa-xmark"></i>
+
+
+
+</button>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<form id="addressForm">
+
+
+
+
+
+<input 
+type="text"
+id="fullName"
+placeholder="Full Name"
+required>
+
+
+
+
+
+
+<input 
+type="text"
+id="phone"
+placeholder="Phone Number"
+required>
+
+
+
+
+
+
+
+<textarea
+id="address"
+placeholder="Full Address"
+required></textarea>
+
+
+
+
+
+
+
+<input 
+type="text"
+id="city"
+placeholder="City"
+required>
+
+<input 
+type="text"
+id="state"
+placeholder="State"
+required>
+
+
+
+
+
+
+
+
+<button 
+type="submit">
+
+
+Save Address
+
+
+</button>
+
+
+
+
+
+
+
+</form>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- CHECKOUT SCRIPT -->
+
+
+<script src="checkout.js"></script>
+
+
+
+
+
+
+</body>
+
+
+</html>
