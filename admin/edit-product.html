@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Product | NovaCart Admin</title>
+
+    <link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard">
+
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+
+        <div class="logo">
+
+            <h2>NovaCart</h2>
+
+        </div>
+
+
+
+        <ul>
+
+
+            <li>
+                <a href="dashboard.html">
+                    📊 Dashboard
+                </a>
+            </li>
+
+
+            <li>
+                <a href="products.html">
+                    📦 Products
+                </a>
+            </li>
+
+
+            <li>
+                <a href="orders.html">
+                    🛒 Orders
+                </a>
+            </li>
+
+
+            <li>
+                <a href="users.html">
+                    👥 Users
+                </a>
+            </li>
+
+
+            <li>
+                <a href="profile.html">
+                    👤 Profile
+                </a>
+            </li>
+
+
+            <li>
+                <a href="change-password.html">
+                    🔒 Change Password
+                </a>
+            </li>
+
+
+            <li>
+                <a href="#" id="logoutBtn">
+                    🚪 Logout
+                </a>
+            </li>
+
+
+        </ul>
+
+
+    </aside>
+
+
+
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+
+
+        <!-- Topbar Same as Dashboard -->
+
+        <header class="topbar">
+
+
+            <div class="topbar-left">
+
+
+                <button id="menuToggle" class="menu-btn">
+
+                    ☰
+
+                </button>
+
+
+            </div>
+
+
+
+            <div class="top-right">
+
+
+                <span>🔔</span>
+
+                <span>🌙</span>
+
+
+                <div class="admin-profile">
+
+
+                    <img
+                    src="https://i.pravatar.cc/100?img=12"
+                    alt="Admin">
+
+
+                    <span>Aashish Gupta</span>
+
+
+                </div>
+
+
+            </div>
+
+
+        </header>
+
+
+
+
+        <!-- Edit Product Form -->
+
+
+        <section class="dashboard-content">
+
+
+            <h1>Edit Product</h1>
+
+
+
+            <form id="editProductForm" class="admin-form">
+
+
+                <input 
+                type="text" 
+                id="name"
+                placeholder="Product Name"
+                required>
+
+
+
+                <input 
+                type="text" 
+                id="category"
+                placeholder="Category"
+                required>
+
+
+
+                <input 
+                type="number" 
+                id="price"
+                placeholder="Price"
+                required>
+
+
+
+                <input 
+                type="number" 
+                id="stock"
+                placeholder="Stock"
+                required>
+
+
+
+                <input 
+                type="text" 
+                id="image"
+                placeholder="Image URL"
+                required>
+
+
+
+                <textarea
+                id="description"
+                rows="5"
+                placeholder="Product Description"
+                required></textarea>
+
+
+
+                <button type="submit">
+
+                    Update Product
+
+                </button>
+
+
+            </form>
+
+
+        </section>
+
+
+    </main>
+
+
+
+</div>
+
+
+
+<script src="js/config.js"></script>
+<script src="js/admin-auth.js"></script>
+<script src="js/logout.js"></script>
+<script src="js/sidebar.js"></script>
+
+<script src="js/edit-product.js"></script>
+
+
+</body>
+
+</html>

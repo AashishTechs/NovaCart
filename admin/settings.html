@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Settings | NovaCart</title>
+
+    <link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard">
+
+
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+
+        <div class="logo">
+
+            <h2>NovaCart</h2>
+
+        </div>
+
+
+
+        <ul>
+
+
+            <li>
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+            </li>
+
+
+
+            <li>
+                <a href="products.html">
+                    Products
+                </a>
+            </li>
+
+
+
+            <li>
+                <a href="orders.html">
+                    Orders
+                </a>
+            </li>
+
+
+
+            <li>
+                <a href="profile.html">
+                    Profile
+                </a>
+            </li>
+
+
+
+            <li>
+                <a href="settings.html" class="active">
+                    Settings
+                </a>
+            </li>
+
+
+
+            <li>
+                <a href="#" id="logout">
+                    Logout
+                </a>
+            </li>
+
+
+        </ul>
+
+
+    </aside>
+
+
+
+
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+
+
+        <!-- Dashboard Same Topbar -->
+
+        <header class="topbar">
+
+
+            <div class="topbar-left">
+
+
+                <button id="menuToggle" class="menu-btn">
+
+                    ☰
+
+                </button>
+
+
+            </div>
+
+
+
+            <div class="top-right">
+
+
+                <span>🔔</span>
+
+                <span>🌙</span>
+
+
+
+                <div class="admin-profile">
+
+
+                    <img
+                    src="https://i.pravatar.cc/100?img=12"
+                    alt="Admin">
+
+
+                    <span>Aashish Gupta</span>
+
+
+                </div>
+
+
+            </div>
+
+
+        </header>
+
+
+
+
+
+        <h1>Admin Settings</h1>
+
+
+
+
+        <div class="settings-card">
+
+
+
+            <h2>Account Settings</h2>
+
+
+
+
+            <div class="setting-item">
+
+
+                <label>
+                    Admin Name
+                </label>
+
+
+
+                <input
+                type="text"
+                value="NovaCart Admin">
+
+
+            </div>
+
+
+
+
+
+            <div class="setting-item">
+
+
+                <label>
+                    Admin Email
+                </label>
+
+
+
+                <input
+                type="email"
+                value="admin@novacart.com">
+
+
+            </div>
+
+
+
+
+
+            <h2 class="security-title">
+
+                Security
+
+            </h2>
+
+
+
+
+            <a href="change-password.html" class="setting-btn">
+
+                Change Password
+
+            </a>
+
+
+
+        </div>
+
+
+
+    </main>
+
+
+
+</div>
+
+
+
+
+<script src="js/config.js"></script>
+<script src="js/admin-auth.js"></script>
+
+<script src="js/logout.js"></script>
+
+<script src="js/sidebar.js"></script>
+
+
+</body>
+
+</html>

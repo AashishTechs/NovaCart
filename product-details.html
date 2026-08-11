@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | NovaCart</title>    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+
+        <nav>
+
+            <div class="logo">
+                <h1>NovaCart</h1>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Shop</a></li>
+                <li><a href="index.html#categories">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="my-orders.html">My Orders</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <a href="wishlist.html"><i class="fa-regular fa-heart"></i> Wishlist</a>
+                <a href="cart.html" class="cart-link"><i class="fa-solid fa-cart-shopping"></i> Cart<span class="cart-count" id="navCartCount">0</span></a>
+                <a href="login.html"><i class="fa-regular fa-user"></i> Login</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+
+        </nav>
+
+    </header>
+
+<main>
+
+<section class="breadcrumb">
+    <a href="index.html">Home</a> <span>/</span> <a href="products.html">Shop</a> <span>/</span> <span id="breadcrumb-name">Product</span>
+</section>
+
+<section class="product-details">
+
+    <div class="product-image">
+
+    <div class="discount-badge">20% OFF</div>
+
+    <div class="zoom-wrap">
+        <img id="product-image" src="" alt="">
+    </div>
+
+    <div class="share-buttons">
+        <span>Share:</span>
+        <a href="#" title="Share on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" title="Share on X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" title="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#" title="Copy link" id="copyLinkBtn"><i class="fa-solid fa-link"></i></a>
+    </div>
+
+</div>
+
+    <div class="product-info">
+
+        <span class="product-category" id="product-category"></span>
+
+        <h1 id="product-name"></h1>
+        <div class="rating" id="product-rating"></div>
+        <h2 id="product-price"></h2>
+
+        <p id="product-description"></p>
+
+        <button class="wishlist-btn">
+            <i class="fa-regular fa-heart"></i>
+        </button>
+
+        <ul class="features">
+            <li>✔ Bluetooth 5.3</li>
+            <li>✔ Active Noise Cancellation</li>
+            <li>✔ 30 Hours Battery Backup</li>
+            <li>✔ Type-C Fast Charging</li>
+            <li>✔ 1 Year Warranty</li>
+        </ul>
+
+        <!-- Quantity -->
+
+<div class="quantity">
+    <label>Quantity:</label>
+    <input type="number" value="1" min="1">
+</div>
+    
+        <div class="product-buttons">
+
+            <button class="btn-shop">
+                Add to Cart
+            </button>
+
+            <button class="btn-explore">
+                Buy Now
+            </button>
+
+        </div>
+
+        <div class="delivery-info">
+            <div class="di-item"><i class="fa-solid fa-truck-fast"></i><div><strong>Free delivery</strong><span>Arrives in 2–4 business days</span></div></div>
+            <div class="di-item"><i class="fa-solid fa-rotate-left"></i><div><strong>7-day easy returns</strong><span>No questions asked</span></div></div>
+            <div class="di-item"><i class="fa-solid fa-shield-halved"></i><div><strong>Secure checkout</strong><span>100% protected payments</span></div></div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="related-products">
+    <div class="section-title">
+        <h2>You May Also Like</h2>
+        <p>Handpicked picks based on this product.</p>
+    </div>
+    <div class="product-container" id="related-products"></div>
+</section>
+
+</main>
+
+<footer>
+
+<p>&copy; 2026 NovaCart. All Rights Reserved.</p>
+
+</footer>
+<script src="config.js"></script>
+<script src="script.js"></script>
+<script src="products.js"></script>
+<script src="wishlist.js"></script>
+<script src="product-details.js"></script>
+</body>
+</html>

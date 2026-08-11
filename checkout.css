@@ -1,0 +1,582 @@
+/* =========================
+   NOVACART CHECKOUT PAGE
+========================= */
+
+
+.checkout-page{
+
+    padding:40px 8%;
+    background:#faf8f2;
+
+}
+
+
+
+.checkout-container{
+
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:30px;
+
+}
+
+
+
+
+/* =========================
+   CHECKOUT CARD
+========================= */
+
+
+.checkout-card{
+
+    background:#ffffff;
+    padding:25px;
+    border-radius:18px;
+    margin-bottom:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+
+
+.checkout-card h2{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:22px;
+    margin-bottom:20px;
+    color:#1f1f1f;
+
+}
+
+
+
+.checkout-card h2 i{
+
+    color:#d4af37;
+
+}
+
+
+
+
+
+/* =========================
+   ADDRESS
+========================= */
+
+
+.address-box{
+
+    border:2px solid #eee;
+    padding:18px;
+    border-radius:12px;
+    background:white;
+
+}
+
+
+
+.address-box.active{
+
+    border-color:#d4af37;
+    background:#fff8e7;
+
+}
+
+
+
+.address-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+
+
+
+.address-header h3{
+
+    margin:0;
+    font-size:18px;
+
+}
+
+
+
+.address-header i{
+
+    color:#d4af37;
+
+}
+
+
+
+.address-box p{
+
+    color:#555;
+    line-height:1.7;
+
+}
+
+
+
+
+.add-address-btn{
+
+    width:100%;
+    margin-top:15px;
+    padding:14px;
+
+    border:none;
+    border-radius:10px;
+
+    background:#d4af37;
+    color:#1f1f1f;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+
+
+.add-address-btn:hover{
+
+    background:#b8860b;
+    color:white;
+
+}
+
+
+
+
+
+/* =========================
+   ORDER SUMMARY
+========================= */
+
+
+#checkoutItems{
+
+    margin-bottom:15px;
+
+}
+
+
+
+.checkout-product{
+
+    display:flex;
+    justify-content:space-between;
+
+    padding:12px 0;
+
+    border-bottom:1px solid #eee;
+
+}
+
+
+
+
+.price-row{
+
+    display:flex;
+    justify-content:space-between;
+
+    padding:12px 0;
+
+}
+
+
+
+.price-row strong{
+
+    font-size:17px;
+
+}
+
+
+
+#checkout-total{
+
+    color:#d4af37;
+    font-size:22px;
+
+}
+
+
+
+
+
+/* =========================
+   PAYMENT
+========================= */
+
+
+.payment-option{
+
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+
+    padding:14px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    margin-bottom:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.payment-option:hover{
+
+    border-color:#d4af37;
+    background:#fff8e7;
+
+}
+
+
+
+.payment-option input{
+
+    accent-color:#d4af37;
+
+}
+
+
+
+
+
+.place-order-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-top:20px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#d4af37;
+
+    color:#1f1f1f;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.place-order-btn:hover{
+
+    background:#b8860b;
+
+    color:white;
+
+}
+
+
+
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+
+.footer{
+
+    background:#1f1f1f;
+
+    color:white;
+
+    padding:40px 8%;
+
+}
+
+
+
+.footer-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+
+
+.footer-box h3{
+
+    color:#d4af37;
+
+}
+
+
+
+.footer-box a{
+
+    display:block;
+
+    color:#ddd;
+
+    text-decoration:none;
+
+    margin:8px 0;
+
+}
+
+
+
+.footer-box a:hover{
+
+    color:#d4af37;
+
+}
+
+
+
+.social-icons i{
+
+    color:#d4af37;
+
+    font-size:22px;
+
+    margin-right:15px;
+
+}
+
+
+
+.copyright{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    color:#aaa;
+
+}
+
+
+
+
+
+/* =========================
+   ADDRESS MODAL
+========================= */
+
+
+.address-modal{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.55);
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999;
+
+}
+
+
+
+
+
+.modal-box{
+
+    background:white;
+
+    width:400px;
+
+    max-width:90%;
+
+    padding:30px;
+
+    border-radius:18px;
+
+}
+
+
+
+
+
+.modal-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.modal-header button{
+
+    border:none;
+
+    background:#fff4d6;
+
+    color:#b8860b;
+
+    width:35px;
+
+    height:35px;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+#addressForm input,
+#addressForm textarea{
+
+    width:100%;
+
+    padding:13px;
+
+    margin-bottom:12px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    outline:none;
+
+}
+
+
+
+#addressForm textarea{
+
+    height:90px;
+
+    resize:none;
+
+}
+
+
+
+
+#addressForm button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#d4af37;
+
+    color:#1f1f1f;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+
+
+#addressForm button:hover{
+
+    background:#b8860b;
+
+    color:white;
+
+}
+
+
+
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+
+@media(max-width:900px){
+
+
+.checkout-container{
+
+    grid-template-columns:1fr;
+
+}
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+.checkout-page{
+
+    padding:25px 5%;
+
+}
+
+
+
+.footer-container{
+
+    grid-template-columns:1fr;
+
+}
+
+
+}
