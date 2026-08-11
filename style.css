@@ -2482,4 +2482,87 @@ footer a{ color:var(--primary-light); }
     }
 
 }
+/* =========================================
+   NOVACART MOBILE MENU FIX
+========================================= */
+
+@media (max-width: 900px){
+
+    header{
+        position: sticky;
+        z-index: 9999;
+    }
+
+    .nav-links{
+        background: linear-gradient(
+            135deg,
+            #0f0d09,
+            #1c1811
+        ) !important;
+
+        border-bottom: 1px solid rgba(201,162,39,.25);
+        box-shadow: 0 15px 35px rgba(0,0,0,.30);
+        z-index: 9998;
+    }
+
+    .nav-links a{
+        color: #fff !important;
+        font-weight: 600;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active{
+        color: #E4C34E !important;
+    }
+
+    .nav-links li{
+        width: 100%;
+    }
+
+    .nav-links a{
+        display: block;
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    /* Login / Register mobile */
+    .login,
+    .register{
+        min-height: calc(100vh - 75px);
+        padding: 45px 16px;
+    }
+
+    .login-box,
+    .register-box{
+        width: 100%;
+        max-width: 430px;
+        padding: 30px 20px;
+    }
+
+}
+
+/* Extra small phones */
+@media (max-width: 480px){
+
+    .login,
+    .register{
+        padding: 35px 12px;
+    }
+
+    .login-box,
+    .register-box{
+        padding: 28px 18px;
+        border-radius: 18px;
+    }
+
+    .login-box h1,
+    .register-box h1{
+        font-size: 30px;
+    }
+
+    .login-box p,
+    .register-box p{
+        font-size: 14px;
+    }
+}
 
