@@ -2566,3 +2566,137 @@ footer a{ color:var(--primary-light); }
     }
 }
 
+
+/* =========================================================
+   MOBILE POLISH PATCH (added)
+   Fixes: hero CTA overflow, oversized section padding,
+   overly-large type on small screens, global horizontal
+   scroll safety net. Placed last on purpose so it wins
+   the cascade without touching/removing older rules.
+========================================================= */
+
+html, body{
+    overflow-x:hidden;
+    max-width:100vw;
+}
+
+/* Hero CTA buttons were overflowing on small screens
+   because .hero-buttons had no flex-wrap */
+.hero-buttons{
+    flex-wrap:wrap;
+}
+
+@media (max-width:600px){
+
+    .hero-buttons a,
+    .btn-shop,
+    .btn-outline,
+    .btn-explore{
+        font-size:15px !important;
+        padding:14px 26px !important;
+    }
+
+    .hero-badge{
+        padding:10px 18px;
+        font-size:12px;
+        margin-bottom:18px;
+    }
+
+    .hero-small{
+        font-size:14px;
+        margin-bottom:14px;
+    }
+
+    .hero-left h1,
+    .hero-left h1 span{
+        font-size:30px !important;
+    }
+
+    .hero-left p{
+        font-size:16px !important;
+        line-height:1.6;
+        margin-bottom:24px;
+    }
+
+    /* Reduce the very heavy 90px/8% section padding used
+       across the page so mobile doesn't feel bulky/empty
+       the way it currently does compared to Flipkart/Amazon */
+    .categories,
+    .featured-products,
+    .why-choose-us,
+    .testimonials,
+    .newsletter,
+    .flash-sale,
+    .offer-banner{
+        padding:40px 5% !important;
+    }
+
+    .section-title h2{
+        font-size:24px !important;
+    }
+
+    .section-title p{
+        font-size:14px !important;
+    }
+
+    /* Product & category grids: 2-up like Flipkart/Amazon
+       instead of single huge stacked cards */
+    .category-container{
+        grid-template-columns:repeat(2,1fr) !important;
+        gap:14px !important;
+    }
+
+    .product-container{
+        grid-template-columns:repeat(2,1fr) !important;
+        gap:14px !important;
+    }
+
+    .product-card{
+        padding:12px !important;
+        min-height:auto !important;
+    }
+
+    .product-card img{
+        height:130px !important;
+    }
+
+    .product-card h3{
+        font-size:14px !important;
+        margin:10px 0 6px !important;
+    }
+
+    .product-card p{
+        font-size:16px !important;
+        margin-bottom:10px !important;
+    }
+
+    .product-card button:not(.wishlist-btn){
+        padding:10px !important;
+        font-size:13px !important;
+    }
+
+    .category-card img{
+        height:110px !important;
+    }
+
+    .category-card h3{
+        padding:12px !important;
+        font-size:14px !important;
+    }
+
+    .testi-grid{
+        grid-template-columns:1fr !important;
+    }
+
+    .insta-grid{
+        grid-template-columns:repeat(3,1fr) !important;
+        gap:6px !important;
+    }
+}
+
+@media (max-width:380px){
+    .category-container,
+    .product-container{
+        grid-template-columns:1fr !important;
+    }
+}
