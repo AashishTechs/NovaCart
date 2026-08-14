@@ -2005,6 +2005,21 @@ footer a{ color:var(--primary-light); }
     gap:8px;
     margin-top:10px;
 }
+
+/* FIX: .add-cart had no rule of its own, so it fell back to
+   the generic ".product-card button{ width:100% }" rule while
+   its sibling .btn-buy-now used flex:1 in the same flex row.
+   width:100% + flex:1 side by side always overflows the card —
+   this was the real cause of cards breaking out of their grid
+   column (worst on narrow mobile columns). Give both buttons
+   matching flex sizing so they share the row correctly. */
+.pc-btn-row .add-cart,
+.pc-btn-row button:not(.wishlist-btn){
+    width:auto;
+    flex:1;
+    min-width:0;
+}
+
 .pc-btn-row .btn-buy-now{
     flex:1;
     padding:12px;
@@ -2697,6 +2712,55 @@ html, body{
 @media (max-width:380px){
     .category-container,
     .product-container{
+        grid-template-columns:1fr !important;
+    }
+}
+
+/* =========================================================
+   FIX: product card overflowing its grid column on mobile.
+   Root cause: ".card-actions-row" buttons ("Add to Cart" /
+   "Buy Now") use flex:1 but flex/grid items don't shrink
+   below their content's natural width by default. That forced
+   the whole card wider than its column, cutting off text,
+   prices and buttons at the screen edge.
+========================================================= */
+
+.product-card{
+    min-width:0;
+}
+
+.product-container,
+.category-container{
+    grid-template-columns: repeat(auto-fit, minmax(0,1fr));
+}
+
+@media (max-width:600px){
+    .product-container,
+    .category-container{
+        grid-template-columns:repeat(2,1fr) !important;
+    }
+
+    .product-card .card-actions-row,
+    .card-actions-row{
+        flex-wrap:wrap !important;
+    }
+
+    .product-card .card-actions-row button:not(.wishlist-btn),
+    .card-actions-row button:not(.wishlist-btn){
+        min-width:0 !important;
+        flex:1 1 100% !important;
+        font-size:13px !important;
+        padding:10px !important;
+    }
+
+    .product-card h3{
+        overflow-wrap:break-word;
+    }
+}
+
+@media (max-width:380px){
+    .product-container,
+    .category-container{
         grid-template-columns:1fr !important;
     }
 }
